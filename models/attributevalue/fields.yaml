@@ -1,0 +1,7 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    model:
+        type: product_attribute_options

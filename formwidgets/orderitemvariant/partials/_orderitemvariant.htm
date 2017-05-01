@@ -1,0 +1,81 @@
+<?php if ($this->previewMode): ?>
+
+    <div class="form-control">
+        <?= $value ?>
+    </div>
+
+<?php else: ?>
+
+<?php $productable_id = $value ?>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="field-section">
+                <h4><?=e(trans('istheweb.shop::lang.product.label')) ?></h4>
+                <p class="help-block"><?=e(trans('istheweb.shop::lang.labels.order_item_product_comment')) ?></p>
+            </div>
+        </div>
+    </div>
+    <div class="row m-t-md">
+        <div class="col-md-6">
+            <select id="variants" class="form-control custom-select productable">
+                <?php if(count($variants) > 0) : ?>
+                    <option value=""><?=e(trans('istheweb.shop::lang.labels.variant_select')) ?></option>
+                    <?php foreach($variants as $key => $value) : ?>
+                        <?php if($type == 'Istheweb\Shop\Models\Variant') : ?>
+                            <?php if($productable_id == $value) : ?>
+                                <option value="<?=$value?>" selected><?=$key?></option>
+                            <?php else : ?>
+                                <option value="<?=$value?>"><?=$key?></option>
+                            <?php endif ?>
+                        <?php else : ?>
+                            <option value="<?=$value?>"><?=$key?></option>
+                        <?php endif ?>
+                    <?php endforeach ?>
+                <?php endif ?>
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <select id="products" class="form-control custom-select productable">
+                <?php if(count($products) > 0) : ?>
+                    <option value=""><?=e(trans('istheweb.shop::lang.labels.product_select')) ?></option>
+                    <?php foreach($products as $key => $value) : ?>
+                        <?php if($type == 'Istheweb\Shop\Models\Product') : ?>
+                            <?php if($productable_id == $value) : ?>
+                                <option value="<?=$value?>" selected><?=$key?></option>
+                            <?php else : ?>
+                                <option value="<?=$value?>"><?=$key?></option>
+                            <?php endif ?>
+                        <?php else : ?>
+                            <option value="<?=$value?>"><?=$key?></option>
+                        <?php endif ?>
+                    <?php endforeach ?>
+                <?php endif ?>
+            </select>
+        </div>
+
+        <input type="hidden" id="_productable_id" name="<?=$name ?>" value="<?=$value ?>" />
+        <input type="hidden" id="_productable_type" name="productable_type" value="<?=$type ?>" />
+
+    </div>
+<?php endif ?>
+
+<script>
+    $('.productable').on('change', function(e){
+
+        $('#_productable_type').val($(this).attr('id'));
+        $('#_productable_id').val($(this).val());
+
+        if($(this).attr('id') == 'variants'){
+            $('#products :nth-child(0)').prop('selected', true);
+            $('#select2-products-container').attr('title', '<?=e(trans("istheweb.shop::lang.labels.product_select")) ?>');
+            $('#select2-products-container').html('<?=e(trans("istheweb.shop::lang.labels.product_select")) ?>');
+        }else{
+            $('#variants :nth-child(0)').prop('selected', true);
+            $('#select2-variants-container').attr('title', '<?=e(trans("istheweb.shop::lang.labels.variant_select")) ?>');
+            $('#select2-variants-container').html('<?=e(trans("istheweb.shop::lang.labels.variant_select")) ?>');
+        }
+    });
+</script>
+

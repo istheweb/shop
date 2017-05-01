@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: istheweb.shop::lang.customer.label
+
+# Model Form Field configuration
+form: $/istheweb/shop/models/customer/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\Shop\Models\Customer
+
+# Default redirect location
+defaultRedirect: istheweb/shop/customers
+
+# Create page
+create:
+    title: istheweb.shop::lang.customer.create_title
+    redirect: istheweb/shop/customers/update/:id
+    redirectClose: istheweb/shop/customers
+
+# Update page
+update:
+    title: istheweb.shop::lang.customer.update_title
+    redirect: istheweb/shop/customers
+    redirectClose: istheweb/shop/customers
+
+# Preview page
+preview:
+    title: istheweb.shop::lang.customer.preview_title

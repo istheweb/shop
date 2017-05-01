@@ -1,0 +1,17 @@
+addresses:
+    label: istheweb.shop::lang.addresses.menu_label
+    manage:
+        form: $/istheweb/shop/models/address/fields.yaml
+        list: $/istheweb/shop/models/address/columns.yaml
+    view:
+        list: $/istheweb/shop/models/address/columns.yaml
+        toolbarButtons: create|delete
+
+user:
+    label: istheweb.shop::lang.customer.label
+    view:
+        form: $/rainlab/user/models/user/fields.yaml
+        toolbarButtons: link|unlink|create
+    manage:
+        form: $/rainlab/user/models/user/fields.yaml
+        list: $/rainlab/user/models/user/columns.yaml

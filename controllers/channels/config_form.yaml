@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: istheweb.shop::lang.channel.label
+
+# Model Form Field configuration
+form: $/istheweb/shop/models/channel/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\Shop\Models\Channel
+
+# Default redirect location
+defaultRedirect: istheweb/shop/channels
+
+# Create page
+create:
+    title: istheweb.shop::lang.channel.create_title
+    redirect: istheweb/shop/channels/update/:id
+    redirectClose: istheweb/shop/channels
+
+# Update page
+update:
+    title: istheweb.shop::lang.channel.update_title
+    redirect: istheweb/shop/channels
+    redirectClose: istheweb/shop/channels
+
+# Preview page
+preview:
+    title: istheweb.shop::lang.channel.preview_title

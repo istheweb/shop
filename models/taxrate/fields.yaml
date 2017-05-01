@@ -1,0 +1,53 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    general_section:
+        label: istheweb.shop::lang.labels.general_info
+        type: section
+    name:
+        label: istheweb.shop::lang.labels.name
+        required: true
+        span: auto
+    active:
+        label: istheweb.shop::lang.fields.active
+        type: switch
+        span: auto
+    criteria_section:
+        label: istheweb.shop::lang.labels.criteria
+        type: section
+    zone:
+        label: istheweb.shop::lang.zones.menu_label
+        type: recordfinder
+        list: ~/plugins/istheweb/shop/models/zone/columns.yaml
+        prompt: istheweb.shop::lang.labels.record_finder
+        nameFrom: name
+        span: auto
+        #type: partial
+        #path: field_zone
+        tab: istheweb.shop::lang.zones.menu_label
+    tax_category:
+        label: istheweb.shop::lang.tax_categories.menu_label
+        type: recordfinder
+        list: ~/plugins/istheweb/shop/models/taxcategory/columns.yaml
+        prompt: istheweb.shop::lang.labels.record_finder
+        nameFrom: name
+        #type: partial
+        #path: field_tax_category
+        span: auto
+        tab: istheweb.shop::lang.tax_categories.menu_label
+    tax_section:
+        label: istheweb.shop::lang.tax_rate.label
+        type: section
+    type:
+        label: istheweb.shop::lang.fields.type
+        span: auto
+        required: true
+        type: dropdown
+        options:
+            P: istheweb.shop::lang.fields.percentage
+            F: istheweb.shop::lang.fields.fix
+    rate:
+        label: istheweb.shop::lang.fields.rate
+        span: auto

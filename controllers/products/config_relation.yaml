@@ -1,0 +1,39 @@
+attributeValues:
+    label: istheweb.shop::lang.attributes.menu_label
+    manage:
+        form: $/istheweb/shop/models/attributevalue/fields.yaml
+        list: $/istheweb/shop/models/attributevalue/columns.yaml
+    view:
+        list: $/istheweb/shop/models/attributevalue/columns.yaml
+        toolbarButtons: create|delete
+
+variants:
+    label: istheweb.shop::lang.variants.menu_label
+    manage:
+        form: $/istheweb/shop/models/variant/fields.yaml
+        list: $/istheweb/shop/models/variant/columns.yaml
+    view:
+        list: $/istheweb/shop/models/variant/columns.yaml
+        toolbarButtons: create|delete
+
+options:
+    label: istheweb.shop::lang.options.menu_label
+    view:
+        list: $/istheweb/shop/models/option/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/istheweb/shop/models/option/columns.yaml
+        form: $/istheweb/shop/models/option/fields.yaml
+
+categories:
+    label: istheweb.shop::lang.categories.menu_label
+    view:
+        list: $/istheweb/shop/models/category/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/istheweb/shop/models/category/columns.yaml
+        form: $/istheweb/shop/models/category/fields.yaml

@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    customer_id:
+        label: istheweb.shop::lang.customer.label
+        type: customer_order_name
+    #order_status:
+    #    label: istheweb.shop::lang.order_status.label
+    #    relation: order_status
+    #    select: name
+    #    type: partial
+    #    path: status_name
+    #    searchable: true
+    total:
+        label: istheweb.shop::lang.fields.total
+    created_at:
+        label: istheweb.shop::lang.labels.published_at
+        type: date
+    updated_at:
+        label: istheweb.shop::lang.labels.updated_at
+        type: date

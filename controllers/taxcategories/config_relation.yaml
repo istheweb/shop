@@ -1,0 +1,8 @@
+tax_rates:
+    label: istheweb.shop::lang.taxrates.menu_label
+    manage:
+        form: $/istheweb/shop/models/taxrate/fields.yaml
+        list: $/istheweb/shop/models/taxrate/columns.yaml
+    view:
+        list: $/istheweb/shop/models/taxrate/columns.yaml
+        toolbarButtons: create|delete

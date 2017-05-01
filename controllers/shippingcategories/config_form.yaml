@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: istheweb.shop::lang.shipping_category.label
+
+# Model Form Field configuration
+form: $/istheweb/shop/models/shippingcategory/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\Shop\Models\ShippingCategory
+
+# Default redirect location
+defaultRedirect: istheweb/shop/shippingcategories
+
+# Create page
+create:
+    title: istheweb.shop::lang.shipping_category.create_title
+    redirect: istheweb/shop/shippingcategories/update/:id
+    redirectClose: istheweb/shop/shippingcategories
+
+# Update page
+update:
+    title: istheweb.shop::lang.shipping_category.update_title
+    redirect: istheweb/shop/shippingcategories
+    redirectClose: istheweb/shop/shippingcategories
+
+# Preview page
+preview:
+    title: istheweb.shop::lang.shipping_category.preview_title

@@ -1,0 +1,34 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    #order:
+        #label: istheweb.shop::lang.order.label
+        #type: relation
+        #nameFrom: reference
+    productable:
+        type: order_item_variant
+
+
+    quantity:
+        label: istheweb.shop::lang.fields.quantity
+        type: number
+        span: auto
+        default: 1
+    unit_price@update:
+        label: istheweb.shop::lang.fields.unit_price
+        type: number
+        span: auto
+        readOnly: true
+
+    unit_total@update:
+        label: istheweb.shop::lang.fields.unit_total
+        type: number
+        span: auto
+        readOnly: true
+    total@update:
+        label: istheweb.shop::lang.fields.total
+        type: number
+        span: auto
+        readOnly: true

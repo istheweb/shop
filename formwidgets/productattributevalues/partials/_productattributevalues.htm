@@ -1,0 +1,29 @@
+<?php if ($this->previewMode): ?>
+
+    <div class="form-control">
+        <?= $value ?>
+    </div>
+
+<?php else: ?>
+
+    <?php if(count($attributes) > 0): ?>
+        <select name="attributes"
+                class="form-control custom-select"
+                data-request="onAttributesChange">
+            <option value="">-- Select attribute --</option>
+        <?php foreach($attributes as $k => $v): ?>
+            <?php if($isModel && $model->attribute_id == $k): ?>
+                <option value="<?=$k ?>" selected><?=$v ?></option>
+            <?php else : ?>
+                <option value="<?=$k ?>"><?=$v ?></option>
+            <?php endif  ?>
+        <?php endforeach ?>
+        </select>
+        <div id="item">
+            <?php if(isset($attribute)): ?>
+                <?= $this->makePartial('item') ?>
+            <?php endif ?>
+        </div>
+    <?php endif ?>
+
+<?php endif ?>

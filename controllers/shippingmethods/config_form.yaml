@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: istheweb.shop::lang.shipping_method.label
+
+# Model Form Field configuration
+form: $/istheweb/shop/models/shippingmethod/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\Shop\Models\ShippingMethod
+
+# Default redirect location
+defaultRedirect: istheweb/shop/shippingmethods
+
+# Create page
+create:
+    title: istheweb.shop::lang.shipping_method.create_title
+    redirect: istheweb/shop/shippingmethods/update/:id
+    redirectClose: istheweb/shop/shippingmethods
+
+# Update page
+update:
+    title: istheweb.shop::lang.shipping_method.update_title
+    redirect: istheweb/shop/shippingmethods
+    redirectClose: istheweb/shop/shippingmethods
+
+# Preview page
+preview:
+    title: istheweb.shop::lang.shipping_method.preview_title

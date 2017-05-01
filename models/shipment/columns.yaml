@@ -1,0 +1,8 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    shipping_method[name]:
+        label: Método de envío
+        searchable: true

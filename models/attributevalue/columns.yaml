@@ -1,0 +1,31 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    attribute[name]:
+        label: istheweb.shop::lang.labels.name
+        searchable: true
+    text_value:
+        label: istheweb.shop::lang.labels.value
+        searchable: true
+    boolean_value:
+        label: istheweb.shop::lang.labels.value
+        searchable: true
+        invisible: true
+    integer_value:
+        label: istheweb.shop::lang.labels.value
+        searchable: true
+        invisible: true
+    float_value:
+        label: istheweb.shop::lang.labels.value
+        searchable: true
+        invisible: true
+    datetime_value:
+        label: istheweb.shop::lang.labels.value
+        searchable: true
+        invisible: true
+    date_value:
+        label: istheweb.shop::lang.labels.value
+        searchable: true
+        invisible: true

@@ -1,0 +1,16 @@
+tax_category:
+    label: istheweb.shop::lang.tax_category.label
+    view:
+        form: $/istheweb/shop/models/taxcategory/fields.yaml
+        toolbarButtons: link|unlink
+    manage:
+        form: $/istheweb/shop/models/taxcategory/fields.yaml
+        list: $/istheweb/shop/models/taxcategory/columns.yaml
+shipping_category:
+    label: istheweb.shop::lang.shipping_category.label
+    view:
+        form: $/istheweb/shop/models/shippingcategory/fields.yaml
+        toolbarButtons: link|unlink
+    manage:
+        form: $/istheweb/shop/models/shippingcategory/fields.yaml
+        list: $/istheweb/shop/models/shippingcategory/columns.yaml

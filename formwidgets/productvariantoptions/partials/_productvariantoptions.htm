@@ -1,0 +1,33 @@
+<?php if ($this->previewMode): ?>
+
+    <div class="form-control">
+        <?= $value ?>
+    </div>
+
+<?php else: ?>
+
+    <?php if($options): ?>
+        <?php foreach($options as $option): ?>
+                <label><?=$option['name'] ?></label>
+                <select name="Variant[optionsValues][<?=$option['code'] ?>]"
+                        class="form-control custom-select">
+                    <option value="">Empty value</option>
+                    <?php foreach($option['optionValues'] as $item): ?>
+                        <?php $isSelected = false ?>
+                        <?php if(isset($variants)): ?>
+                            <?php foreach($variants as $variant): ?>
+                                <?php if($variant == $item->id): ?>
+                                    <?php $isSelected = true ?>
+                                    <option value="<?= $item->id ?>" selected><?= $item->value ?></option>
+                                <?php endif ?>
+                            <?php endforeach ?>
+                        <?php endif ?>
+                        <?php if(!$isSelected) : ?>
+                            <option value="<?= $item->id ?>"><?= $item->value ?></option>
+                        <?php endif ?>
+                    <?php endforeach ?>
+                </select>
+        <?php endforeach ?>
+    <?php endif ?>
+
+<?php endif ?>

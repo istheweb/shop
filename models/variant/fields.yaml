@@ -1,0 +1,70 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    code:
+        label: istheweb.shop::lang.labels.code
+        type: text
+    availableOn:
+        label: istheweb.shop::lang.labels.available_on
+        type: datepicker
+        mode: date
+        span: auto
+    availableUntil:
+        label: istheweb.shop::lang.labels.available_until
+        type: datepicker
+        mode: date
+        span: auto
+    optionSection:
+        label: istheweb.shop::lang.options.menu_label
+        type: section
+        comment: Esta seccion contiene las opciones de este elemento.
+    optionsValues:
+        type: product_variant_options
+    #optionsValues:
+        #type: partial
+        #path: field_values
+    precios_section:
+        label: istheweb.shop::lang.fields.prices
+        type: section
+        comment: istheweb.shop::lang.labels.prices_comment
+    pricing_calculator:
+        label: istheweb.shop::lang.fields.pricing_calculator
+        span: auto
+        type: dropdown
+    price:
+        label: istheweb.shop::lang.fields.price
+        type: number
+        span: left
+        cssClass: padded
+    on_hand:
+        label: istheweb.shop::lang.fields.on_hand
+        type: number
+        span: auto
+    tracked:
+        label: istheweb.shop::lang.fields.tracked
+        type: switch
+    propiedades:
+        label: istheweb.shop::lang.fields.properties
+        type: section
+        comment: istheweb.shop::lang.labels.properties_comment
+    width:
+        label: istheweb.shop::lang.fields.width
+        span: auto
+        type: number
+    height:
+        label: istheweb.shop::lang.fields.height
+        span: auto
+        type: number
+    depth:
+        label: istheweb.shop::lang.fields.depth
+        span: auto
+        type: number
+    weight:
+        label: istheweb.shop::lang.fields.weight
+        span: auto
+        type: number
+
+

@@ -1,0 +1,71 @@
+<div
+    id="<?= $this->getId() ?>"
+    class="field-recordfinder loading-indicator-container size-input-text"
+    data-control="recordfinder"
+    data-refresh-handler="<?= $this->getEventHandler('onRefresh') ?>"
+    data-data-locker="#<?= $field->getId() ?>">
+    <span class="form-control">
+        <?php if ($value): ?>
+            <span class="primary"><?= e($nameValue) ?: 'Undefined' ?></span>
+            <?php if ($descriptionValue): ?>
+                <span class="secondary"> - <?= e($descriptionValue) ?></span>
+            <?php endif ?>
+        <?php else: ?>
+            <span class="text-muted"><?= $prompt ?></span>
+        <?php endif ?>
+    </span>
+
+    <?php if (!$this->previewMode): ?>
+        <button
+            class="btn btn-default"
+            data-control="popup"
+            data-size="huge"
+            data-handler="<?= $this->getEventHandler('onFindRecord') ?>"
+            data-request-data="recordfinder_flag: 1"
+            type="button">
+            <i class="icon-th-list"></i>
+        </button>
+    <?php endif ?>
+
+    <input
+        type="hidden"
+        name="<?= $field->getName() ?>"
+        id="<?= $field->getId() ?>"
+        value="<?= e($value) ?>"
+        />
+</div>
+
+
+<?php if($addresses) : ?>
+
+    <div class="" style="margin-top: 20px">
+        <label>Direcciones del cliente</label>
+        <select name="addresses" class="form-control custom-select"
+                data-request="<?=$this->getEventHandler('onChange') ?>"
+                data-request-success="updateData(data)">
+            <option value="">Selecciona una dirección</option>
+            <?php foreach($addresses as $address) : ?>
+                <option value="<?=$address->id ?>"><?=$address->address_1 ?> - <?=$address->postcode ?> <?=$address->city ?> </option>
+            <?php endforeach ?>
+        </select>
+    </div>
+<?php endif ?>
+
+<script>
+    function updateData(data){
+        var country = data.address.country_id;
+        var country_option = " option[value='"+data.address.country_id+"']";
+        var state_option = " option[value='"+data.address.state_id+"']";
+        $('#Form-relationShippingAddressManageForm-field-Address-address_1').val(data.address.address_1);
+        $('#Form-relationShippingAddressManageForm-field-Address-address_2').val(data.address.address_2);
+        $('#Form-relationShippingAddressManageForm-field-Address-city').val(data.address.city);
+        $('#Form-relationShippingAddressManageForm-field-Address-postcode').val(data.address.postcode);
+        $("#Form-relationShippingAddressManageForm-field-Address-country "+country_option+"" ).attr('selected', true);
+        var country_text = $("#Form-relationShippingAddressManageForm-field-Address-country "+country_option+"" ).text();
+        $('#select2-Form-relationShippingAddressManageForm-field-Address-country-container').html(country_text);
+        $("#Form-relationShippingAddressManageForm-field-Address-state "+state_option+"" ).attr('selected', true);
+        var state_text = $("#Form-relationShippingAddressManageForm-field-Address-state "+state_option+"" ).text();
+        $('#select2-Form-relationShippingAddressManageForm-field-Address-state-container').html(state_text);
+
+    }
+</script>

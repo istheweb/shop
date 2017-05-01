@@ -1,0 +1,192 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+
+secondaryTabs:
+  fields:
+    name:
+        label: istheweb.shop::lang.labels.name
+        span: auto
+        type: text
+        tab: istheweb.shop::lang.labels.general_info
+    slug:
+        label: istheweb.shop::lang.labels.slug
+        span: auto
+        required: true
+        preset:
+            field: name
+            type: slug
+        tab: istheweb.shop::lang.labels.general_info
+    code:
+        label: istheweb.shop::lang.labels.code
+        span: auto
+        type: text
+        tab: istheweb.shop::lang.labels.general_info
+    product_type:
+        label: Tipo de producto
+        type: dropdown
+        span: auto
+        tab: istheweb.shop::lang.labels.general_info
+    available_on:
+        label: istheweb.shop::lang.labels.available_on
+        type: datepicker
+        mode: date
+        span: auto
+        tab: istheweb.shop::lang.labels.general_info
+    available_until:
+        label: istheweb.shop::lang.labels.available_until
+        type: datepicker
+        mode: date
+        span: auto
+        tab: istheweb.shop::lang.labels.general_info
+    on_hand:
+        label: istheweb.shop::lang.fields.on_hand
+        type: number
+        span: auto
+        tab: istheweb.shop::lang.labels.general_info
+    tracked:
+        label: istheweb.shop::lang.fields.tracked
+        type: switch
+        span: auto
+        tab: istheweb.shop::lang.labels.general_info
+    enabled:
+        label: istheweb.shop::lang.labels.enabled
+        type: switch
+        span: auto
+        tab: istheweb.shop::lang.labels.general_info
+    channel:
+        label: istheweb.shop::lang.channel.label
+        type: switch
+        span: auto
+        tab: istheweb.shop::lang.labels.general_info
+    caption:
+        type: richeditor
+        size: huge
+        label: istheweb.shop::lang.fields.caption
+        span: auto
+        tab: istheweb.shop::lang.labels.general_info
+    description:
+        type: richeditor
+        size: huge
+        label: istheweb.shop::lang.labels.description
+        span: auto
+        tab: istheweb.shop::lang.labels.general_info
+    prices_section:
+        label: istheweb.shop::lang.fields.prices
+        type: section
+        tab: istheweb.shop::lang.fields.prices
+    wholesaler_price:
+        label: istheweb.shop::lang.fields.wholesaler_price
+        type: number
+        span: auto
+        tab: istheweb.shop::lang.fields.prices
+    price:
+        label: istheweb.shop::lang.fields.price
+        type: number
+        span: auto
+        tab: istheweb.shop::lang.fields.prices
+    tax_section:
+        label: istheweb.shop::lang.fields.taxes
+        type: section
+        tab: istheweb.shop::lang.fields.prices
+    tax_category:
+        label: istheweb.shop::lang.tax_category.label
+        type: relation
+        tab: istheweb.shop::lang.fields.prices
+    inventory_section:
+        label: istheweb.shop::lang.shipping_method.label
+        type: section
+        tab: istheweb.shop::lang.sidebar.shippings
+    shipping_category:
+        label: istheweb.shop::lang.shipping_category.label
+        type: relation
+        nameFrom: name
+        tab: istheweb.shop::lang.sidebar.shippings
+    width:
+        label: istheweb.shop::lang.fields.width
+        span: auto
+        type: number
+        tab: istheweb.shop::lang.sidebar.shippings
+    height:
+        label: istheweb.shop::lang.fields.height
+        span: auto
+        type: number
+        tab: istheweb.shop::lang.sidebar.shippings
+    depth:
+        label: istheweb.shop::lang.fields.depth
+        span: auto
+        type: number
+        tab: istheweb.shop::lang.sidebar.shippings
+    weight:
+        label: istheweb.shop::lang.fields.weight
+        span: auto
+        type: number
+        tab: istheweb.shop::lang.sidebar.shippings
+    volume:
+        label: istheweb.shop::lang.fields.volume
+        span: auto
+        type: number
+        tab: istheweb.shop::lang.sidebar.shippings
+    categories:
+        label: istheweb.shop::lang.categories.menu_label
+        type: partial
+        path: field_categories
+        tab: istheweb.shop::lang.categories.menu_label
+    attributeValues:
+        type: partial
+        path: field_attribute_values
+        tab:  istheweb.shop::lang.attributes.menu_label
+    options_section:
+        label: istheweb.shop::lang.options.menu_label
+        type: section
+        comment: istheweb.shop::lang.options.description
+        tab: istheweb.shop::lang.tabs.options_variants
+        hidden: true
+        dependsOn: product_type
+    options:
+        type: partial
+        path: field_options
+        tab: istheweb.shop::lang.tabs.options_variants
+        hidden: true
+        dependsOn: product_type
+    variants_section:
+        label: istheweb.shop::lang.variants.menu_label
+        type: section
+        comment: istheweb.shop::lang.variants.description
+        tab: istheweb.shop::lang.tabs.options_variants
+        hidden: true
+        dependsOn: product_type
+    variants:
+        type: partial
+        path: field_variants
+        context: update
+        tab: istheweb.shop::lang.tabs.options_variants
+        hidden: true
+        dependsOn: product_type
+    meta_keywords:
+        type: richeditor
+        size: huge
+        label: istheweb.shop::lang.labels.meta_keywords
+        span: auto
+        tab: istheweb.shop::lang.tabs.seo
+    meta_description:
+        type: richeditor
+        size: huge
+        label: istheweb.shop::lang.labels.meta_description
+        span: auto
+        tab: istheweb.shop::lang.tabs.seo
+    short_description:
+        type: richeditor
+        size: huge
+        label: istheweb.shop::lang.labels.short_description
+        span: auto
+        tab: istheweb.shop::lang.tabs.seo
+    pictures:
+        label: istheweb.shop::lang.labels.pictures
+        type: fileupload
+        mode: image
+        span: auto
+        imageHeight: 260
+        imageWidth: 260
+        tab: istheweb.shop::lang.tabs.attachments

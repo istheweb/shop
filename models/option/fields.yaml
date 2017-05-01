@@ -1,0 +1,20 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: istheweb.shop::lang.labels.name
+        span: auto
+        type: text
+    code:
+        label: istheweb.shop::lang.labels.code
+        span: auto
+        type: text
+        preset:
+          field: name
+          type: slug
+    values@update:
+        label: istheweb.shop::lang.labels.values
+        type: partial
+        path: field_values

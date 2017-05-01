@@ -1,0 +1,35 @@
+1.0.1: First version of isShop
+1.0.2:
+  - Create Product Module Tables
+  - create_addresses_table.php
+  - create_adjustments_table.php
+  - create_attribute_values_table.php
+  - create_attributes_table.php
+  - create_categories_table.php
+  - create_channels_table.php
+  - create_currencies_table.php
+  - create_inventory_units_table.php
+  - create_customers_table.php
+  - create_option_values_table.php
+  - create_options_table.php
+  - create_order_items_table.php
+  - create_order_statuses_table.php
+  - create_payment_methods_table.php
+  - create_payements_table.php
+  - create_orders_table.php
+  - create_pivots_table.php
+  - create_products_table.php
+  - create_shipping_categories_table.php
+  - create_shipping_methods_table.php
+  - create_shipment_items_table.php
+  - create_shipments_table.php
+  - create_tax_categories_table.php
+  - create_tax_rates_table.php
+  - create_variants_table.php
+  - create_zones_table.php
+  - seed_order_statuses_table.php
+  - seed_spain_states_table.php
+  - seed_tables.php
+
+
+

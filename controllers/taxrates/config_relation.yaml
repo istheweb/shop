@@ -1,0 +1,16 @@
+zone:
+    label: istheweb.shop::lang.zone.label
+    view:
+        form: $/istheweb/shop/models/zone/fields.yaml
+        toolbarButtons: link|unlink
+    manage:
+        form: $/istheweb/shop/models/zone/fields.yaml
+        list: $/istheweb/shop/models/zone/columns.yaml
+tax_category:
+    label: istheweb.shop::lang.tax_category.label
+    view:
+        form: $/istheweb/shop/models/taxcategory/fields.yaml
+        toolbarButtons: link|unlink
+    manage:
+        form: $/istheweb/shop/models/taxcategory/fields.yaml
+        list: $/istheweb/shop/models/taxcategory/columns.yaml

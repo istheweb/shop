@@ -1,0 +1,19 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    code:
+        label: istheweb.shop::lang.labels.code
+        searchable: true
+    name:
+        label: istheweb.shop::lang.labels.name
+        searchable: true
+    created_at:
+        label: istheweb.shop::lang.labels.created_at
+        type: date
+        searchable: true
+    updated_at:
+        label: istheweb.shop::lang.labels.updated_at
+        type: date
+        searchable: true

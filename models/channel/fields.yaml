@@ -1,0 +1,41 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    code:
+        label: istheweb.shop::lang.labels.code
+        span: auto
+        type: text
+        required: true
+    name:
+        label: istheweb.shop::lang.labels.name
+        span: auto
+        required: true
+    default_locale:
+        label: istheweb.shop::lang.fields.locale
+        span: auto
+        type: relation
+    base_currency:
+        label: istheweb.shop::lang.fields.currency
+        span: auto
+        type: relation
+    tax_zone:
+        label: istheweb.shop::lang.fields.taxes
+        span: auto
+        type: relation
+    enabled:
+        label: istheweb.shop::lang.labels.enabled
+        type: switch
+        span: auto
+    color:
+        label: istheweb.shop::lang.fields.color
+        type: colorpicker
+        span: auto
+    hostname:
+        label: istheweb.shop::lang.fields.hostname
+        span: auto
+    description:
+        label: istheweb.shop::lang.labels.description
+        type: richeditor
+        span: auto

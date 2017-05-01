@@ -1,0 +1,277 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: istheweb.shop::lang.labels.name
+        span: auto
+    owner:
+        label: istheweb.shop::lang.fields.owner
+        span: auto
+
+secondaryTabs:
+    fields:
+      invoiceTemplates:
+          span: left
+          type: dropdown
+          label: istheweb.shop::lang.fields.invoice_templates
+          tab: istheweb.shop::lang.tabs.content
+      order_reference:
+          label: 'istheweb.shop::lang.fields.order_reference'
+          span: auto
+          comment: 'istheweb.shop::lang.labels.order_reference_comment'
+          tab: istheweb.shop::lang.tabs.content
+      default_customer_pass:
+          span: left
+          label: istheweb.shop::lang.fields.default_customer_pass
+          span: auto
+          tab: istheweb.shop::lang.tabs.content
+      checkoutSteps:
+          type: dropdown
+          span: auto
+          label: istheweb.shop::lang.fields.checkout_steps
+          tab: istheweb.shop::lang.tabs.content
+      section_social:
+          label: 'istheweb.connect::lang.fields.social_networks'
+          span: full
+          type: section
+          tab: istheweb.shop::lang.tabs.content
+      social:
+          span: full
+          type: repeater
+          tab: istheweb.shop::lang.tabs.content
+          form:
+              fields:
+                  network:
+                      label: 'istheweb.connect::lang.fields.network'
+                      span: auto
+                      options:
+                          appstore: App Store
+                          deviant: Deviant Art
+                          ebay: eBay
+                          github: Github
+                          linkedin: LinkedIn
+                          rss: RSS
+                          tumblr: Tumblr
+                          wordpress: Wordpress
+                          behance: BeHance
+                          dribble: Dribble
+                          facebook: Facebook
+                          gplus: Google Plus
+                          pinterest: Pinterest
+                          instagram: Instragram
+                          skype: Skype
+                          reddit: Reddit
+                          twitter: Twitter
+                          youtube: Youtube
+                          blogger: Blogger
+                          dropbox: Dropbox
+                          gdrive: Google Drive
+                          playstore: Play Store
+                          soundcloud: Sound Cloud
+                          mail: Email
+                          vimeo: Vimeo
+                      type: dropdown
+                  url:
+                      label: 'istheweb.connect::lang.fields.url'
+                      span: auto
+                      type: text
+      opening-times:
+          type: richeditor
+          span: auto
+          label: istheweb.shop::lang.fields.opening-times
+          tab: istheweb.shop::lang.tabs.content
+      comments:
+          type: richeditor
+          span: auto
+          label: istheweb.shop::lang.fields.comments
+          tab: istheweb.shop::lang.tabs.content
+      country:
+          type: dropdown
+          span: auto
+          label: istheweb.shop::lang.fields.country
+          tab: istheweb.shop::lang.tabs.local
+      state:
+          type: dropdown
+          span: auto
+          dependsOn: country
+          label: istheweb.shop::lang.fields.state
+          tab: istheweb.shop::lang.tabs.local
+      locale:
+          type: dropdown
+          span: auto
+          label: istheweb.shop::lang.fields.locale
+          tab: istheweb.shop::lang.tabs.local
+      currency:
+          type: dropdown
+          span: auto
+          label: istheweb.shop::lang.fields.currency
+          tab: istheweb.shop::lang.tabs.local
+      length:
+          type: dropdown
+          span: auto
+          label: istheweb.shop::lang.fields.length
+          tab: istheweb.shop::lang.tabs.local
+      weight:
+          type: dropdown
+          span: auto
+          label: istheweb.shop::lang.fields.weight
+          tab: istheweb.shop::lang.tabs.local
+      tax:
+          type: dropdown
+          label: istheweb.shop::lang.fields.taxes
+          span: auto
+          tab: istheweb.shop::lang.tabs.local
+      cash:
+          type: switch
+          label: istheweb.shop::lang.fields.cash_delivery_sys
+          tab: istheweb.shop::lang.tabs.payment_method
+          cssClass: 'col-3'
+      cash_fee:
+          type: text
+          span: auto
+          label: istheweb.shop::lang.fields.cash_payment_method_fee
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: cash
+              condition: checked
+      paypal:
+          type: switch
+          label: istheweb.shop::lang.fields.paypal_sys
+          tab: istheweb.shop::lang.tabs.payment_method
+          cssClass: 'col-3'
+      paypal_client_id:
+          span: auto
+          label: istheweb.shop::lang.fields.paypal_client_id
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: paypal
+              condition: checked
+      paypal_secret_id:
+          span: auto
+          label: istheweb.shop::lang.fields.paypal_secret_id
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: paypal
+              condition: checked
+      paypal_url_ok:
+          span: auto
+          label:  istheweb.shop::lang.fields.paypal_url_ok
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: paypal
+              condition: checked
+      paypal_url_ko:
+          span: auto
+          label:  istheweb.shop::lang.fields.paypal_url_ko
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: paypal
+              condition: checked
+      paypal_fee:
+          type: text
+          span: auto
+          label: istheweb.shop::lang.fields.paypal_payment_method_fee
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: paypal
+              condition: checked
+      tpv:
+          type: switch
+          label: istheweb.shop::lang.fields.tarjeta_sys
+          tab: istheweb.shop::lang.tabs.payment_method
+          cssClass: 'col-3'
+      tpv_fuc:
+          span: auto
+          label:  istheweb.shop::lang.fields.fuc
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: tpv
+              condition: checked
+      tpv_terminal:
+          span: auto
+          label:  istheweb.shop::lang.fields.terminal
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: tpv
+              condition: checked
+      tpv_url_ok:
+          span: auto
+          label:  istheweb.shop::lang.fields.url_ok
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: tpv
+              condition: checked
+      tpv_url_ko:
+          span: auto
+          label:  istheweb.shop::lang.fields.url_ko
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: tpv
+              condition: checked
+      tpv_signature:
+          span: auto
+          label:  istheweb.shop::lang.fields.tpv_signature
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: tpv
+              condition: checked
+      tpv_fee:
+          type: text
+          span: auto
+          label: istheweb.shop::lang.fields.tpv_payment_method_fee
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: tpv
+              condition: checked
+      stripe:
+          type: switch
+          label: istheweb.shop::lang.fields.stripe_sys
+          tab: istheweb.shop::lang.tabs.payment_method
+          cssClass: 'col-3'
+      stripe_api_id:
+          span: auto
+          label:  istheweb.shop::lang.fields.stripe_api_id
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: stripe
+              condition: checked
+      stripe_publishable_key:
+          span: auto
+          label:  istheweb.shop::lang.fields.stripe_publishable_key
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: stripe
+              condition: checked
+      stripe_fee:
+          type: text
+          span: auto
+          label: istheweb.shop::lang.fields.stripe_payment_method_fee
+          tab: istheweb.shop::lang.tabs.payment_method
+          trigger:
+              action: show
+              field: stripe
+              condition: checked
+      logo:
+          type: fileupload
+          mode: image
+          span: auto
+          imageWidth: 200
+          imageHeight: 200
+          label: istheweb.shop::lang.fields.logo
+          tab: istheweb.shop::lang.fields.logo

@@ -1,0 +1,16 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    productable_id:
+        label: istheweb.shop::lang.variant.label
+        type: productable_order_item
+    unit_price:
+        label: istheweb.shop::lang.fields.unit_price
+    quantity:
+        label: istheweb.shop::lang.fields.quantity
+    unit_total:
+        label: istheweb.shop::lang.fields.unit_total
+    total:
+        label: istheweb.shop::lang.fields.total

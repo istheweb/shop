@@ -1,0 +1,9 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    shipping_method:
+        label: Shipping
+        type: dropdown
+        nameFrom: name

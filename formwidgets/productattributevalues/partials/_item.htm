@@ -1,0 +1,25 @@
+<br/>
+<div class="form-group">
+    <?php if($attribute->type == 'integer'): ?>
+        <label>Valor</label>
+        <input type="number"
+               name="value"
+               class="form-control"
+               value="<?= $attribute->value ?>" />
+    <?php elseif($attribute->type == 'checkbox'): ?>
+        <label class="custom-switch">
+            <input type="checkbox" name="value" />
+            <span><span>On</span><span>Off</span></span>
+            <a class="slide-button"></a>
+        </label>
+    <?php elseif($attribute->type == 'date' || $attribute->type == 'datetime'): ?>
+        <?= $this->datePicker->render() ?>
+    <?php else : ?>
+        <label>Valor</label>
+        <input type="text"
+               name="value"
+               class="form-control"
+               value="<?= $attribute->value ?>" />
+    <?php endif ?>
+
+</div>

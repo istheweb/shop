@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: istheweb.shop::lang.labels.name
+        searchable: true
+    iso_code:
+        label: istheweb.shop::lang.fields.iso_code
+        searchable: true
+    iso_code_num:
+        label: istheweb.shop::lang.fields.iso_code_num
+        searchable: true
+    sign:
+        label: istheweb.shop::lang.fields.sign
+        searchable: true
+    active:
+        labels: istheweb.shop::lang.fields.active
+        searchable: true
+        type: switch

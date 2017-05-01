@@ -1,0 +1,33 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: istheweb.shop::lang.labels.name
+        span: auto
+    iso_code:
+        label: istheweb.shop::lang.fields.iso_code
+        span: auto
+    iso_code_num:
+        label: istheweb.shop::lang.fields.iso_code_num
+        span: auto
+    sign:
+        label: istheweb.shop::lang.fields.sign
+        span: auto
+    format:
+        label: istheweb.shop::lang.fields.format
+        span: auto
+        type: dropdown
+    conversion_rate:
+        label: istheweb.shop::lang.fields.conversion_rate
+        span: auto
+    decimals:
+        label: istheweb.shop::lang.fields.decimals
+        type: switch
+        span: auto
+    active:
+        label: istheweb.shop::lang.fields.active
+        type: switch
+        span: auto
+

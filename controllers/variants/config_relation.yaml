@@ -1,0 +1,10 @@
+#optionsValues:
+#    label: istheweb.shop::lang.options.menu_label
+#    view:
+#        list: $/istheweb/shop/models/optionvalue/columns.yaml
+#        toolbarButtons: add|remove
+#    manage:
+#        showSearch: true
+#        recordsPerPage: 10
+#        list: $/istheweb/shop/models/optionvalue/columns.yaml
+#        form: $/istheweb/shop/models/optionvalue/fields.yaml

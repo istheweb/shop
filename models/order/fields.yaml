@@ -1,0 +1,108 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+
+fields:
+    user_section:
+        label: istheweb.shop::lang.customer.label
+        type: section
+        comment: istheweb.shop::lang.labels.client_comment
+        tab: istheweb.shop::lang.customer.label
+    customer:
+        type: partial
+        path: field_customer
+        tab: istheweb.shop::lang.customer.label
+    shipping_address_section:
+        label: istheweb.shop::lang.fields.shipping_address
+        type: section
+        span: auto
+        tab: istheweb.shop::lang.customer.label
+    billing_address_section:
+        label: istheweb.shop::lang.fields.billing_address
+        type: section
+        span: auto
+        tab: istheweb.shop::lang.customer.label
+    shipping_address:
+        type: partial
+        path: field_shipping_address
+        span: auto
+        tab: istheweb.shop::lang.customer.label
+    billing_address:
+        type: partial
+        path: field_billing_address
+        span: auto
+        tab: istheweb.shop::lang.customer.label
+
+tabs:
+    fields:
+        variants_section:
+            label: istheweb.shop::lang.order_items.menu_label
+            span: auto
+            type: section
+            context: update
+            tab: istheweb.shop::lang.tabs.order_details
+        order_items@update:
+            type: partial
+            path: field_order_items
+            tab: istheweb.shop::lang.tabs.order_details
+        shipment_section@update:
+            label: istheweb.shop::lang.fields.shipment
+            span: auto
+            type: section
+            context: update
+            tab: istheweb.shop::lang.tabs.order_details
+        shipment@update:
+            type: partial
+            path: field_shipment
+            tab: istheweb.shop::lang.tabs.order_details
+        totales_section@update:
+            label: istheweb.shop::lang.fields.totals
+            type: section
+            tab: istheweb.shop::lang.tabs.order_details
+        tax@update:
+            label: istheweb.shop::lang.tax_rates.menu_label
+            span: auto
+            disabled: true
+            tab: istheweb.shop::lang.tabs.order_details
+        shipping@update:
+            label: istheweb.shop::lang.sidebar.shippings
+            span: auto
+            disabled: true
+            tab: istheweb.shop::lang.tabs.order_details
+        subtotal@update:
+            label: istheweb.shop::lang.fields.subtotal
+            span: auto
+            disabled: true
+            tab: istheweb.shop::lang.tabs.order_details
+        total@update:
+            label: istheweb.shop::lang.fields.total
+            span: auto
+            disabled: true
+            tab: istheweb.shop::lang.tabs.order_details
+            comment: istheweb.shop::lang.labels.order_totals_comment
+
+secondaryTabs:
+    fields:
+        channel_section:
+            label: istheweb.shop::lang.channel.label
+            type: section
+            tab: istheweb.shop::lang.tabs.order_details
+        channel:
+            type: relation
+            tab: istheweb.shop::lang.tabs.order_details
+        currencies_section:
+            label: istheweb.shop::lang.currency.label
+            type: section
+            tab: istheweb.shop::lang.tabs.order_details
+        currencies:
+            type: dropdown
+            tab: istheweb.shop::lang.tabs.order_details
+        payment_section_section@update:
+            label: istheweb.shop::lang.tabs.payment_method
+            type: section
+            tab: istheweb.shop::lang.tabs.order_details
+        payment_method@update:
+            type: dropdown
+            placeholder: istheweb.shop::lang.order.select_payment_method
+            tab: istheweb.shop::lang.tabs.order_details

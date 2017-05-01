@@ -1,0 +1,74 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    code:
+        label: istheweb.shop::lang.labels.code
+        span: auto
+    zone:
+        label: istheweb.shop::lang.zones.menu_label
+        span: auto
+        type: recordfinder
+        list: ~/plugins/istheweb/shop/models/zone/columns.yaml
+        prompt: istheweb.shop::lang.labels.record_finder
+        nameFrom: name
+    name:
+        label: istheweb.shop::lang.labels.name
+        span: auto
+    position:
+        label: istheweb.shop::lang.fields.position
+        span: auto
+        type: number
+    description:
+        label: istheweb.shop::lang.labels.description
+        type: textarea
+        size: small
+    category_section:
+        label: istheweb.shop::lang.labels.category_requirements
+        type: section
+        comment: istheweb.shop::lang.labels.category_requirements_comments
+    shipping_category:
+        label: istheweb.shop::lang.shipping_category.label
+        #type: partial
+        #path: field_shipping_category
+        type: recordfinder
+        list: ~/plugins/istheweb/shop/models/shippingcategory/columns.yaml
+        prompt: istheweb.shop::lang.labels.record_finder
+        nameFrom: name
+        span: auto
+    category_requirement:
+        type: radio
+        span: auto
+        options:
+            1: istheweb.shop::lang.labels.all_units_match
+            2: istheweb.shop::lang.labels.one_unit_match
+            3: istheweb.shop::lang.labels.none_units_match
+    tax_section:
+        label: istheweb.shop::lang.tax_rates.menu_label
+        type: section
+        comment: istheweb.shop::lang.tax_rate.description
+    tax_category:
+        label: istheweb.shop::lang.tax_category.label
+        #type: recordfinder
+        #list: ~/plugins/istheweb/shop/models/taxcategory/columns.yaml
+        #prompt: istheweb.shop::lang.labels.record_finder
+        #nameFrom: name
+        type: partial
+        path: field_tax_category
+    charge_section:
+        label: istheweb.shop::lang.shipping_methods.charges
+        type: section
+        comment: istheweb.shop::lang.labels.shipping_method_charges_comment
+    calculator:
+        label: istheweb.shop::lang.fields.calculator
+        type: dropdown
+        span: auto
+        options:
+            flat_rate: istheweb.shop::lang.labels.flat_rate
+            per_unit_rate: istheweb.shop::lang.labels.per_unit_rate
+    amount:
+        label: istheweb.shop::lang.fields.amount
+        type: number
+        span: auto
+

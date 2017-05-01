@@ -1,0 +1,34 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+  user:
+    type: user_client
+    nameFrom: name
+    descriptionFrom: email
+    list: $/rainlab/user/models/user/columns.yaml
+  addresses_section@update:
+    label: istheweb.shop::lang.addresses.menu_label
+    type: section
+    comment: istheweb.shop::lang.labels.addresses_comment
+  addresses@update:
+      type: partial
+      path: field_addresses
+  other_data_section:
+    label: istheweb.shop::lang.labels.additional_info
+    type: section
+    comment: istheweb.shop::lang.labels.other_data_comment
+  phone:
+      label: istheweb.shop::lang.fields.phone
+      span: auto
+  mobile:
+      label: istheweb.shop::lang.fields.mobile
+      span: auto
+  cif:
+      label: istheweb.shop::lang.fields.cif
+      span: auto
+  fax:
+      label: istheweb.shop::lang.fields.fax
+      span: auto
+

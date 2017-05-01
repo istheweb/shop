@@ -1,0 +1,27 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: istheweb.shop::lang.labels.name
+        span: auto
+    active:
+        label: istheweb.shop::lang.fields.active
+        type: switch
+        span: auto
+    zones_section:
+        label: istheweb.shop::lang.tabs.members
+        type: section
+        comment: istheweb.shop::lang.labels.members_comment
+    countries:
+        label: istheweb.shop::lang.fields.countries
+        type: partial
+        path: field_countries
+    states:
+        label: istheweb.shop::lang.fields.states
+        type: partial
+        path: field_states
+    description:
+        label: istheweb.shop::lang.labels.description
+        type: textarea

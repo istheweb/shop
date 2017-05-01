@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: istheweb.shop::lang.tax_category.label
+
+# Model Form Field configuration
+form: $/istheweb/shop/models/taxcategory/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\Shop\Models\TaxCategory
+
+# Default redirect location
+defaultRedirect: istheweb/shop/taxcategories
+
+# Create page
+create:
+    title: istheweb.shop::lang.tax_category.create_title
+    redirect: istheweb/shop/taxcategories/update/:id
+    redirectClose: istheweb/shop/taxcategories
+
+# Update page
+update:
+    title: istheweb.shop::lang.tax_category.update_title
+    redirect: istheweb/shop/taxcategories
+    redirectClose: istheweb/shop/taxcategories
+
+# Preview page
+preview:
+    title: istheweb.shop::lang.tax_category.preview_title

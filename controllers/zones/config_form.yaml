@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: istheweb.shop::lang.zone.label
+
+# Model Form Field configuration
+form: $/istheweb/shop/models/zone/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\Shop\Models\Zone
+
+# Default redirect location
+defaultRedirect: istheweb/shop/zones
+
+# Create page
+create:
+    title: istheweb.shop::lang.zone.create_title
+    redirect: istheweb/shop/zones/update/:id
+    redirectClose: istheweb/shop/zones
+
+# Update page
+update:
+    title: istheweb.shop::lang.zone.update_title
+    redirect: istheweb/shop/zones
+    redirectClose: istheweb/shop/zones
+
+# Preview page
+preview:
+    title: istheweb.shop::lang.zone.preview_title

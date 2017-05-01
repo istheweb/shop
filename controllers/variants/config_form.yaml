@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: istheweb.shop::lang.variant.label
+
+# Model Form Field configuration
+form: $/istheweb/shop/models/variant/fields.yaml
+
+# Model Class name
+modelClass: Istheweb\Shop\Models\Variant
+
+# Default redirect location
+defaultRedirect: istheweb/shop/variants
+
+# Create page
+create:
+    title: istheweb.shop::lang.variant.create_title
+    redirect: istheweb/shop/variants/update/:id
+    redirectClose: istheweb/shop/variants
+
+# Update page
+update:
+    title: istheweb.shop::lang.variant.update_title
+    redirect: istheweb/shop/variants
+    redirectClose: istheweb/shop/variants
+
+# Preview page
+preview:
+    title: istheweb.shop::lang.variant.preview_title

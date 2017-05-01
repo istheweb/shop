@@ -1,0 +1,20 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    position:
+        label: istheweb.shop::lang.fields.position
+        searchable: true
+    code:
+        label: istheweb.shop::lang.labels.code
+        searchable: true
+    name:
+        label: istheweb.shop::lang.labels.name
+        searchable: true
+    zone[name]:
+        label: istheweb.shop::lang.zone.label
+        type: relation
+    is_enabled:
+        label: istheweb.shop::lang.labels.enabled
+        type: switch
