@@ -27,9 +27,6 @@
   - create_tax_rates_table.php
   - create_variants_table.php
   - create_zones_table.php
-  - seed_order_statuses_table.php
-  - seed_spain_states_table.php
-  - seed_table.php
 
 
 
